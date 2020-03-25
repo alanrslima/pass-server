@@ -1,10 +1,6 @@
 const routes = require("express").Router();
-// const multer = require("multer");
-// const multerConfig = require("./config/multer");
-// const auth = require("./controllers/auth");
+const passController = require("./controllers/PassController");
 
-const passCreator = require("./controllers/filesAssociated");
-
-routes.get("/pass", passCreator.index);
+routes.post("/pass", passController.index);
 
 module.exports = routes;
